@@ -10,19 +10,9 @@ Last modified date: 2020 22 Jun 21:28
 
 ---
 
-The vanilla fonts for Apple's SF Mono. These fonts don't have changelogs but still change.
+```
+FontForge: 20200314
+nerd-fonts: v2.1.0 (4b269b2776969ab87320e853d826a71984d1c3f7)
+```
 
-Steps to extract on Linux:
-
-```
-wget https://apple.box.com/shared/static/obqoann24digvuoicmplk65onas3tz20.dmg
-7z x obqoann24digvuoicmplk65onas3tz20.dmg
-cd SFMonoFonts
-7z x 'SF Mono Fonts.pkg'
-7z x 'Payload-'
-```
-Fonts are located in Library/Fonts. To install to system:
-```
-...
-sudo mv Library/Fonts /usr/share/SF-Mono
-```
+`fontforge -script ./font-patcher --mono --complete --outputdir SF-Mono-NF-Complete .otf`
